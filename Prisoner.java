@@ -1,6 +1,6 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)/**
+import java.awt.Color;
+/*
  * Write a description of class Prisoner here.
  * 
  * @author (your name) 
@@ -8,12 +8,66 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Prisoner extends Actor
 {
-    /**
-     * Act - do whatever the Prisoner wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+     /** Current speed */
+    private double speed = 0;
+
+    /** The location */
+    private double altitude;
+    
+
+    private GreenfootImage prisoner;
+   
+    
+    public Prisoner()
     {
-        // Add your action code here.
-    }    
+        prisoner = new GreenfootImage(40,40);
+        prisoner.setColor(Color.black);
+        prisoner.fill();
+        setImage(prisoner);
+    }       
+
+    public void act()
+    {
+        processKeys();
+
+        setLocation(getX(), (int) (altitude));
+
+    }
+
+    /**
+     * Lander has been added to the world.
+     */
+    public void addedToWorld(World world) 
+    {
+       
+        altitude = getY();
+    }
+    
+    /**
+     * Handle keyboard input.
+     */
+    private void processKeys() 
+    {
+        if(Greenfoot.isKeyDown("down")) 
+        {
+           
+        }
+    }
+
+    /**
+     * Check if we are colliding with anything and take appropiate action.
+    
+    private void checkCollision() 
+    {
+        if (isLanding()) {
+            setImage(rocket);
+            moon.addObject(new Flag(), getX(), getY());
+            Greenfoot.stop();
+        } 
+        else if (isExploding()) {
+            moon.addObject(new Explosion(), getX(), getY());
+            moon.removeObject(this);
+        }
+    }
+    */
 }
