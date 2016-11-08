@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class rwadasdas here.
+ * Write a description of class Door here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class rwadasdas extends Actor
+public class Door extends Actor
 {
     /**
-     * Act - do whatever the rwadasdas wants to do. This method is called whenever
+     * Act - do whatever the Door wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
