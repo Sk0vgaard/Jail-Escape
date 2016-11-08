@@ -58,8 +58,8 @@ public class Prisoner extends Movement
     {
         Actor key = getOneObjectAtOffset(0, 0, Key.class);
         return key != null;
-        // Actor hint = getOneObjectAtOffset(0, 0, Hint.class);
-        // return hint != null;
+        //Actor hint = getOneObjectAtOffset(0, 0, Hint.class);
+        //return hint != null;
     }
     
     /**
