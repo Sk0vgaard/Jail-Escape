@@ -10,13 +10,16 @@ public class Prisoner extends Actor
 {   
     private int age;
     private int keysFound;
+    private int dx=300;
+    private int dy=200;
     private int stepsTaken;
+    public static Prisoner main;
     
-
 
     public Prisoner()
     {
         keysFound = 0;
+        main=this;
     }
 
     /**
@@ -34,14 +37,19 @@ public class Prisoner extends Actor
         }
         
     }
+
+
     /**
-     * Move one step forward.
-     */
-    public void move()
-    {
-        move(0);
-    }
+    * x and y getter
+    */
     
+        public int prisonerGetX(){
+        return  getX();
+       }
+    
+        public int prisonerGetY(){
+        return  getY();
+       }
     // /**
      // * Turn left by 90 degrees.
      // */
@@ -109,35 +117,61 @@ public class Prisoner extends Actor
      * Act - do whatever the Prisoner wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    
-    private void doSomething()
+/**
+     * Move one step forward.
+     */
+    public void move()
     {
+        setLocation(dx, dy);
+        stepsTaken = stepsTaken +1;
+    }    
         
-    }
  
         public void walk()
     {
         if (Greenfoot.isKeyDown("w"))
         {
-            setRotation(270);
-            move(1);
-            stepsTaken = stepsTaken +1;
-        }else if (Greenfoot.isKeyDown("a"))
+            dy-=2;
+            if(Greenfoot.isKeyDown("a"))
         {
-            setRotation(180);
-            move(1);
-            stepsTaken = stepsTaken +1;
-        }else if (Greenfoot.isKeyDown("s"))
+            dx+=-2;
+            move(); 
+        }
+        else if (Greenfoot.isKeyDown("d"))
         {
-            setRotation(90);
-            move(1);
-            stepsTaken = stepsTaken +1;
-        }else if (Greenfoot.isKeyDown("d"))
-        {
-            setRotation(0);
-            move(1);
-            stepsTaken = stepsTaken +1;
+            dx+=2;
+            move();
 }
+            move();
+        }
+        //wawdawdadawdawdawdawdwadawdwadawdawdawdawdawdawdawdawdawdawdawdawdawdawdawda
+        else if (Greenfoot.isKeyDown("a"))
+        {
+            dx+=-2;
+            if(Greenfoot.isKeyDown("s"))
+            {
+                 dy+=2; 
+                 move();
+            }
+            move(); 
+        }
+        //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        else if (Greenfoot.isKeyDown("s"))
+        {
+            dy+=2; 
+             if (Greenfoot.isKeyDown("d"))
+        {
+            dx+=2;
+            move();
+}
+            move();
+        }       
+        //ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+        else if (Greenfoot.isKeyDown("d"))
+        {
+            dx+=2;
+            move();
+}
+         //dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 }
 }
