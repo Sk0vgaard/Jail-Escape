@@ -6,7 +6,7 @@ import java.awt.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Guard extends Movement
+public class Guard extends Actor
 {
     /**
      * Act - do whatever the Gaurd wants to do. This method is called whenever
