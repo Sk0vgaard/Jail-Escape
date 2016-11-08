@@ -14,7 +14,7 @@ public class Guard extends Actor
      */
     public static Guard main;
     GreenfootImage guardImg;
-    
+
     public Guard()
     {
         main=this;
@@ -23,11 +23,12 @@ public class Guard extends Actor
         guardImg.fill();
         setImage(guardImg);
     }
-    
-    private double distanceFromPrisoner(){
-       int X = Prisoner.main.prisonerGetX();
-       int Y = Prisoner.main.prisonerGetY();
-       return Math.sqrt((X-getX())*(X-getX())+(Y-getY())*(Y-getY()));
+    private int getPrisonerX(){return Prisoner.main.prisonerGetX();}
+    private int getPrisonerY(){return Prisoner.main.prisonerGetY();}
+    //calculate distance from prisoner
+   private double distanceFromPrisoner(){
+       
+       return Math.sqrt((Prisoner.main.prisonerGetX()-getX())*(Prisoner.main.prisonerGetX()-getX())+(Prisoner.main.prisonerGetY()-getY())*(Prisoner.main.prisonerGetY()-getY()));
     
     }
     public void act() 
@@ -69,18 +70,14 @@ public class Guard extends Actor
     }
     private void followPrisoner()
     {  
-            int X = Prisoner.main.prisonerGetX();
-    int Y = Prisoner.main.prisonerGetY();
-        turnTowards(X,Y);
+        turnTowards(getPrisonerX(),getPrisonerY());
         move(1);
     }
     public void catchPrisoner()
     {   
         if(isTouching(Prisoner.class)){
-        removeTouching(Prisoner.class);
-        
+        //removeTouching(Prisoner.class);
+        Greenfoot.stop(); 
     }
     }
     }
-     
-
