@@ -96,24 +96,51 @@ public class Prisoner extends Movement
         
     }
  
-        public void walk()
+                public void walk()
     {
         if (Greenfoot.isKeyDown("w"))
         {
-            setRotation(270);
-            move(2);
-        }else if (Greenfoot.isKeyDown("a"))
+            dy-=2;
+            if(Greenfoot.isKeyDown("a"))
         {
-            setRotation(180);
-            move(2);
-                   }else if (Greenfoot.isKeyDown("s"))
+            dx+=-2;
+            move(); 
+        }
+        else if (Greenfoot.isKeyDown("d"))
         {
-            setRotation(90);
-            move(2);
-                    }else if (Greenfoot.isKeyDown("d"))
-        {
-            setRotation(0);
-            move(2);
+            dx+=2;
+            move();
 }
+            move();
+        }
+        //wawdawdadawdawdawdawdwadawdwadawdawdawdawdawdawdawdawdawdawdawdawdawdawdawda
+        else if (Greenfoot.isKeyDown("a"))
+        {
+            dx+=-2;
+            if(Greenfoot.isKeyDown("s"))
+            {
+                 dy+=2; 
+                 move();
+            }
+            move(); 
+        }
+        //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        else if (Greenfoot.isKeyDown("s"))
+        {
+            dy+=2; 
+             if (Greenfoot.isKeyDown("d"))
+        {
+            dx+=2;
+            move();
+}
+            move();
+        }       
+        //ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+        else if (Greenfoot.isKeyDown("d"))
+        {
+            dx+=2;
+            move();
+}
+         //dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 }
 }
