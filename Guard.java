@@ -23,61 +23,75 @@ public class Guard extends Actor
         guardImg.fill();
         setImage(guardImg);
     }
-    private int getPrisonerX(){return Prisoner.main.prisonerGetX();}
-    private int getPrisonerY(){return Prisoner.main.prisonerGetY();}
-    //calculate distance from prisoner
-   private double distanceFromPrisoner(){
-       
-       return Math.sqrt((Prisoner.main.prisonerGetX()-getX())*(Prisoner.main.prisonerGetX()-getX())+(Prisoner.main.prisonerGetY()-getY())*(Prisoner.main.prisonerGetY()-getY()));
-    
-    }
+
     public void act() 
     {   
-        walkingType();
+        walk();
         catchPrisoner();
     }  
-    public int guardGetY()
+
+    private int getPrisonerX()
     {
-        return getX();
+        MyWorld w = (MyWorld) getWorld();
+        return w.getPrisoner().getX();
     }
-    public int guardGetX()
+
+    private int getPrisonerY()
     {
-        return getY();
+        MyWorld w = (MyWorld) getWorld();
+        return w.getPrisoner().getY();
     }
-    private void walkingType()
+    //calculate distance from prisoner
+    private double distanceFromPrisoner()
+    {
+        double a = Math.pow(getPrisonerX() - getX(), 2);
+        double b = Math.pow(getPrisonerY() - getY(), 2);
+        double c = Math.sqrt(a + b);
+        // if(c == 0)
+        // {
+            // return getPrisonerX() - getY();
+        // }
+        return c;
+    }
+
+    private void walk()
     {   
-        if(distanceFromPrisoner()>300)
-        {
+        MyWorld w = (MyWorld) getWorld();
+        if(!w.getPrisoner().isInSight(this) || distanceFromPrisoner()>300 )
+        {            
             randomWalking();
-        }
-        else
+        }        
+       else
         {
             followPrisoner();
         }
-    
+
     }
+
     private void randomWalking()
     {
         if(isAtEdge())
-        turn(79);
+            turn(79);
         if(Greenfoot.getRandomNumber(180)<40) {
             if(Greenfoot.getRandomNumber(2)<1) {
                 turn(20); }
-                else {
-                    turn(-20); }
+            else {
+                turn(-20); }
+        }
+        move(1);
     }
-    move(1);
-    }
+
     private void followPrisoner()
     {  
         turnTowards(getPrisonerX(),getPrisonerY());
         move(1);
     }
+
     public void catchPrisoner()
     {   
         if(isTouching(Prisoner.class)){
-        //removeTouching(Prisoner.class);
-        Greenfoot.stop(); 
+            //removeTouching(Prisoner.class);
+            Greenfoot.stop(); 
+        }
     }
-    }
-    }
+}
