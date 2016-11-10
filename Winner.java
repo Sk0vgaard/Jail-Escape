@@ -10,7 +10,10 @@ public class Winner extends MyWorld
 {
     private static final int WORLD_WIDTH = 800;
     private static final int WORLD_HEIGHT = 500;
+<<<<<<< HEAD
     private boolean soundHasPlayed = false;
+=======
+>>>>>>> origin/master
     /**
      * Constructor for objects of class Winner.
      * 
@@ -21,6 +24,7 @@ public class Winner extends MyWorld
         winner.scale(WORLD_WIDTH, WORLD_HEIGHT);
         setBackground(winner);
     }
+<<<<<<< HEAD
 
     /*
      * Makes the winner sound once 
@@ -34,6 +38,12 @@ public class Winner extends MyWorld
             sound.play();
             soundHasPlayed = true;
         }
+=======
+    
+        public void act()
+    {
+        String key = Greenfoot.getKey();
+>>>>>>> origin/master
         if (key != null && key.equals("enter"))
         {
             Greenfoot.setWorld(new World1());

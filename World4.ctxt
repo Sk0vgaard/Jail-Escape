@@ -10,7 +10,10 @@ comment11.params=
 comment11.target=void\ roomWalls5()
 comment2.params=
 comment2.target=void\ topWalls()
+<<<<<<< HEAD
 comment2.text=\r\n\ These\ methods\ are\ making\ the\ walls\r\n
+=======
+>>>>>>> origin/master
 comment3.params=
 comment3.target=void\ buttomWalls()
 comment4.params=

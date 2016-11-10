@@ -11,10 +11,17 @@ public class QuizHandler
     private String answer;
     private String hint;
 
+<<<<<<< HEAD
     private static final int LABEL_X = 550;
     private static final int HINT_Y = 70;
     private static final int QUESTION_Y = 50;
     private static final int ANSWER_Y = 90;
+=======
+    private static final int LABEL_X = 750;
+    private static final int HINT_Y = 30;
+    private static final int QUESTION_Y = 50;
+    private static final int ANSWER_Y = 70;
+>>>>>>> origin/master
 
     private Label hintLbl; 
     private Label questionLbl;
@@ -51,8 +58,12 @@ public class QuizHandler
     {
         return answer;
     }
+<<<<<<< HEAD
     
     //See if the answer the player has entered is correct
+=======
+
+>>>>>>> origin/master
     public boolean isCorrectAnswer()
     {
         String lblText = answerLbl.getText();

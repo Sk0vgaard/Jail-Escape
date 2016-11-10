@@ -9,7 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Door extends Actor
 {
     private MyWorld nextWorld;
+<<<<<<< HEAD
     //Lets the door know which world to enter
+=======
+>>>>>>> origin/master
     public Door(MyWorld nextWorld)
     {
         this.nextWorld = nextWorld;

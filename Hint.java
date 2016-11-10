@@ -16,7 +16,11 @@ public class Hint extends AbstractItem
     {
         // Add your action code here.
     }
+<<<<<<< HEAD
     //When picked up it shows the hint label in the gameworld
+=======
+    
+>>>>>>> origin/master
     public void pickup()
     {
         MyWorld world = (MyWorld) getWorld();

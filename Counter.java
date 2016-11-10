@@ -10,7 +10,10 @@ import java.awt.Color;
 public class Counter extends Actor
 {
     private int keyHint = 0;
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/master
     
     /**
      * Act - do whatever the Counter wants to do. This method is called whenever
@@ -21,7 +24,10 @@ public class Counter extends Actor
         setImage(new GreenfootImage("Keys/hints : " + keyHint, 24, Color.GREEN, Color.BLACK));
     }    
     
+<<<<<<< HEAD
     //Add key counts to the counter
+=======
+>>>>>>> origin/master
     public void addKeyAndHint()
     {
         keyHint++;        

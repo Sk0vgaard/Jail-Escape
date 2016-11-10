@@ -6,11 +6,23 @@ comment1.target=MyWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
 comment2.params=
 comment2.target=Counter\ getCounter()
+<<<<<<< HEAD
 comment2.text=\r\n\r\n
 comment3.params=
 comment3.target=Prisoner\ getPrisoner()
+=======
+comment3.params=
+comment3.target=Prisoner\ getPrisoner()
+<<<<<<< HEAD
+>>>>>>> origin/master
 comment4.params=
 comment4.target=QuizHandler\ getQuizHandler()
 comment5.params=handler
 comment5.target=void\ setHandler(QuizHandler)
 numComments=6
+<<<<<<< HEAD
+=======
+=======
+numComments=4
+>>>>>>> origin/master
+>>>>>>> origin/master

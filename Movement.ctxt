@@ -8,6 +8,7 @@ comment2.params=
 comment2.target=void\ blockWalls()
 comment3.params=
 comment3.target=void\ checkWall()
+<<<<<<< HEAD
 comment4.params=x\ y
 comment4.target=int\ getRotationAngle(int,\ int)
 comment5.params=angle
@@ -15,3 +16,6 @@ comment5.target=void\ turn(int)
 comment6.params=
 comment6.target=boolean\ atWorldEdge()
 numComments=7
+=======
+numComments=4
+>>>>>>> origin/master

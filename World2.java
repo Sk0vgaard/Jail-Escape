@@ -15,6 +15,10 @@ public class World2 extends MyWorld
      */
     public World2()
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
         super();
         Key key = new Key();
         Hint hint = new Hint();
@@ -28,7 +32,11 @@ public class World2 extends MyWorld
         addObject(key, 700, 100);
         addObject(hint, 350, 400);
 
+<<<<<<< HEAD
         QuizHandler handler = new QuizHandler("How many months have 28 days?", "12", "A two figured number");
+=======
+        QuizHandler handler = new QuizHandler("What is the only mammal that can fly?", "bat", "Mouse");
+>>>>>>> origin/master
         setHandler(handler);
 
         topWalls();
@@ -42,9 +50,12 @@ public class World2 extends MyWorld
 
     }
 
+<<<<<<< HEAD
     /*
      * These methods are making the walls
      */
+=======
+>>>>>>> origin/master
     private void topWalls()
     {
         int pos = 0;
@@ -134,3 +145,25 @@ public class World2 extends MyWorld
     }
 }
 
+<<<<<<< HEAD
+=======
+=======
+        Key key = new Key();
+
+        // Create a new world with 1200x800 cells with a cell size of 1x1 pixels.
+        
+        addObject(getPrisoner(), 500, 400);
+        // addObject(new Guard(), 50, 50);
+        addObject(new Guard(), 600, 400);
+        // addObject(new Guard(), 50, 400);
+        addObject(new Door(), 750, 450);
+        addObject(key, 550, 400);
+        
+        for(int i = 350; i < 450; i++)
+        {
+            addObject(new Key(), 550, i);
+        }
+    }
+}
+>>>>>>> origin/master
+>>>>>>> origin/master

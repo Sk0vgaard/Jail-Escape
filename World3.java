@@ -8,12 +8,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class World3 extends MyWorld
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> origin/master
+>>>>>>> origin/master
 
     /**
      * Constructor for objects of class World3.
      * 
      */
     public World3()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 
     {
         super();
@@ -30,7 +42,11 @@ public class World3 extends MyWorld
         addObject(key, 200, 50);
         addObject(hint, 740, 450);
 
+<<<<<<< HEAD
         QuizHandler handler = new QuizHandler("What tastes better than it smells?","tongue","A human part.");
+=======
+        QuizHandler handler = new QuizHandler("","","tissemand");
+>>>>>>> origin/master
         setHandler(handler);
 
         topWalls();
@@ -44,9 +60,12 @@ public class World3 extends MyWorld
         roomWalls4();
     }
 
+<<<<<<< HEAD
     /*
      * These methods are making the walls
      */
+=======
+>>>>>>> origin/master
     private void topWalls()
     {
         int pos = 0;
@@ -145,4 +164,25 @@ public class World3 extends MyWorld
 
         } while (pos <= 270);
     }
+<<<<<<< HEAD
+=======
+=======
+    {
+        Key key = new Key();
+        
+        // Create a new world with 1200x800 cells with a cell size of 1x1 pixels.
+        
+        addObject(getPrisoner(), 200, 300);
+        addObject(new Guard(), 50, 50);
+        addObject(new Guard(), 600, 400);
+        addObject(new Guard(), 50, 400);
+        addObject(new Door(), 750, 450);
+        addObject(key, 450, 50);
+    }
+    
+    
+    
+    
+>>>>>>> origin/master
+>>>>>>> origin/master
 }

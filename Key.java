@@ -16,10 +16,17 @@ public class Key extends AbstractItem
     {
         // Add your action code here.
     }   
+<<<<<<< HEAD
     //Shows the question and answer label when it is picked up
     public void pickup()
     {
 
+=======
+       
+    public void pickup()
+    {
+        
+>>>>>>> origin/master
         MyWorld world = (MyWorld) getWorld();
         world.getQuizHandler().showQuestionLabel(world);
         world.getQuizHandler().showAnswerLabel(world);

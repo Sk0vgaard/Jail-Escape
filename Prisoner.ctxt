@@ -8,6 +8,7 @@ comment10.target=boolean\ hasKey()
 comment11.params=actor
 comment11.target=boolean\ isInSight(greenfoot.Actor)
 comment2.params=
+<<<<<<< HEAD
 comment2.target=boolean\ hasGun()
 comment3.params=
 comment3.target=void\ act()
@@ -27,3 +28,41 @@ comment9.params=
 comment9.target=void\ walk()
 comment9.text=\r\n\ checks\ which\ key\ is\ pressed\ and\ moves\ accordingly\r\n
 numComments=12
+=======
+comment2.target=void\ act()
+comment2.text=\r\n\ Do\ whatever\ the\ key\ likes\ to\ to\ just\ now.\r\n
+comment3.params=
+comment3.target=void\ openDoor()
+comment4.params=
+<<<<<<< HEAD
+comment4.target=boolean\ foundItem()
+comment4.text=\r\n\ Check\ whether\ there\ is\ a\ key\ in\ the\ same\ cell\ as\ we\ are.\r\n\ Return\ true,\ if\ there\ is,\ false\ otherwise.\r\n
+comment5.params=
+comment5.target=void\ pickUpItem()
+=======
+comment4.target=boolean\ foundKey()
+comment4.text=\r\n\ Check\ whether\ there\ is\ a\ key\ in\ the\ same\ cell\ as\ we\ are.\r\n\ Return\ true,\ if\ there\ is,\ false\ otherwise.\r\n
+comment5.params=
+comment5.target=void\ pickUpKey()
+comment5.text=\r\n\ Pick\ up\ the\ key\ (if\ there\ is\ one\ in\ our\ cell).\r\n
+>>>>>>> origin/master
+comment6.params=x\ y
+comment6.target=void\ move(int,\ int)
+comment6.text=\r\n\ Move\ one\ step\ forward.\r\n
+comment7.params=
+<<<<<<< HEAD
+comment7.target=void\ walk()
+comment7.text=\r\n\ checks\ which\ key\ is\ pressed\ and\ moves\ accordingly\r\n
+comment8.params=
+comment8.target=boolean\ hasKey()
+=======
+comment7.target=void\ doSomething()
+comment7.text=\r\n\ Act\ -\ do\ whatever\ the\ Prisoner\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment8.params=
+comment8.target=void\ walk()
+comment8.text=\r\n\ checks\ which\ key\ is\ pressed\ and\ moves\ accordingly\r\n
+>>>>>>> origin/master
+comment9.params=actor
+comment9.target=boolean\ isInSight(greenfoot.Actor)
+numComments=10
+>>>>>>> origin/master

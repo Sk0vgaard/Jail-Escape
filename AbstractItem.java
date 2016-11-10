@@ -14,7 +14,10 @@ public abstract class AbstractItem extends Actor
      */
     public void pickup()
     {            
+<<<<<<< HEAD
         //Counts the key and hint and removes the object
+=======
+>>>>>>> origin/master
         MyWorld myworld = (MyWorld) getWorld();
         Counter counter = myworld.getCounter();
         counter.addKeyAndHint();

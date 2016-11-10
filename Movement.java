@@ -15,8 +15,14 @@ public class Movement extends Actor
      */
     public void act() 
     {
+<<<<<<< HEAD
     }    
     //checks if next step is going to set object location into wall, if it is it doesnt let it to. Works better for Guard
+=======
+        // Add your action code here.
+<<<<<<< HEAD
+    }    
+>>>>>>> origin/master
             public void blockWalls()
     {   
         
@@ -57,28 +63,57 @@ public class Movement extends Actor
             setLocation(x1,y1-SPEED);
         }
     }
+<<<<<<< HEAD
         //checks if next step is going to set object location into wall, if it is it doesnt let it to. Works better for Prisoner
+=======
+    
+>>>>>>> origin/master
         public void checkWall()
     {
         int x1=getX();
         int y1=getY();
 
+<<<<<<< HEAD
         if(getOneIntersectingObject(Walls.class)!=null)
+=======
+        if(getOneIntersectingObject(Walls.class)==null)
+        {
+            
+        }
+        else
+>>>>>>> origin/master
         {
             setLocation(x1+SPEED,y1);
         }
 
+<<<<<<< HEAD
         if(getOneIntersectingObject(Walls.class)!=null)
 
+=======
+        if(getOneIntersectingObject(Walls.class)==null)
+        {
+            
+        }
+        else
+>>>>>>> origin/master
         {
             setLocation(x1-SPEED,y1);
         }
 
+<<<<<<< HEAD
         if(getOneIntersectingObject(Walls.class)!=null)
+=======
+        if(getOneIntersectingObject(Walls.class)==null)
+        {
+
+        }
+        else
+>>>>>>> origin/master
         {
             setLocation(x1,y1+SPEED);
         }
 
+<<<<<<< HEAD
         if(getOneIntersectingObject(Walls.class)!=null)
         {
             setLocation(x1,y1-SPEED);
@@ -115,4 +150,20 @@ public class Movement extends Actor
         else
             return false;
     }
+=======
+        if(getOneIntersectingObject(Walls.class)==null)
+        {
+
+        }
+        else
+        {
+            setLocation(x1,y1-SPEED);
+        }
+    }
+=======
+    }  
+    
+    
+>>>>>>> origin/master
+>>>>>>> origin/master
 }

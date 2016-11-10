@@ -8,9 +8,19 @@ import java.awt.*;
  */
 public class MyWorld extends World
 {
+<<<<<<< HEAD
     Counter counter = new Counter();
     private Prisoner prisoner;
     private QuizHandler handler;
+<<<<<<< HEAD
+=======
+=======
+    private Prisoner prisoner;
+    private Counter counter = new Counter();
+    
+
+>>>>>>> origin/master
+>>>>>>> origin/master
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -23,18 +33,34 @@ public class MyWorld extends World
         addObject(counter, 100,40);
 
     }
+<<<<<<< HEAD
     /*
      *
      */
+=======
+
+>>>>>>> origin/master
     public Counter getCounter()
     {
         return counter;
     }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/master
+>>>>>>> origin/master
     public Prisoner getPrisoner()
     {
         return prisoner;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 
     public QuizHandler getQuizHandler()
     {
@@ -46,4 +72,16 @@ public class MyWorld extends World
         this.handler = handler;
     }
 
+<<<<<<< HEAD
+=======
+=======
+    
+    /**
+     * 
+     */
+    
+    
+    
+>>>>>>> origin/master
+>>>>>>> origin/master
 }

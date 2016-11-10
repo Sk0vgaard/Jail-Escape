@@ -26,12 +26,20 @@ public class World4 extends MyWorld
         addObject(new Guard(), 100, 200);
         addObject(new Guard(), 600, 400);
         addObject(new Guard(), 250, 350);
+<<<<<<< HEAD
         addObject(new Door(new World5()), 790, 255);
+=======
+        addObject(new Door(new Winner()), 790, 255);
+>>>>>>> origin/master
 
         addObject(key, 50, 450);
         addObject(hint, 450, 200);
 
+<<<<<<< HEAD
         QuizHandler handler = new QuizHandler("What has a neck but no head","bottle","You drink from it");
+=======
+        QuizHandler handler = new QuizHandler("","","tissemand");
+>>>>>>> origin/master
         setHandler(handler);
 
         topWalls();
@@ -45,10 +53,14 @@ public class World4 extends MyWorld
         roomWalls4();
         roomWalls5();
     }
+<<<<<<< HEAD
     
     /*
      * These methods are making the walls
      */
+=======
+
+>>>>>>> origin/master
     private void topWalls()
     {
         int pos = 0;

@@ -1,5 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+<<<<<<< HEAD
 import java.awt.*;
+=======
+>>>>>>> origin/master
 
 /**
  * Counter that displays some taxt and a number.
@@ -26,7 +29,10 @@ public class Label extends Actor
     {
         this("", false, false);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     /**
      * Create a counter with a given text prefix, initialized to zero.
      */
@@ -60,7 +66,11 @@ public class Label extends Actor
                 text += " ";
                 updateImage();
             }
+<<<<<<< HEAD
             //Does so the arrow keys won't show up on label
+=======
+
+>>>>>>> origin/master
             else if (key!=null) {
                 if(key != "up" && key != "down" && key != "left" && key != "right")
                 {
@@ -73,16 +83,31 @@ public class Label extends Actor
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Increment the counter value by one.
+     */
+
+
+    /**
+>>>>>>> origin/master
      * Show the current text and count on this actor's image.
      */
     private void updateImage()
     {
         GreenfootImage image = getImage();
+<<<<<<< HEAD
         image.clear();  
         image.setFont(new Font("Verdana", Font.BOLD, 18));
         image.drawString(text, 1, 12);
     }
 
+=======
+        image.clear();       
+        image.drawString(text, 1, 12);
+    }
+    
+>>>>>>> origin/master
     public String getText()
     {
         return text;

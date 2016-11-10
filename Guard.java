@@ -18,12 +18,28 @@ public class Guard extends Movement
     public Guard()
     {
         main=this;
+<<<<<<< HEAD
         getImage().scale(30,30);
+=======
+<<<<<<< HEAD
+        getImage().scale(40,40);
+        // guardImg = new GreenfootImage(30,30);
+        // guardImg.setColor(Color.black);
+        // guardImg.fill();
+        // setImage(guardImg);
+=======
+        guardImg = new GreenfootImage(30,30);
+        guardImg.setColor(Color.black);
+        guardImg.fill();
+        setImage(guardImg);
+>>>>>>> origin/master
+>>>>>>> origin/master
     }
 
     public void act() 
     {   
         walk();
+<<<<<<< HEAD
         blockWalls();
         catchPrisoner();
         tryToDie();
@@ -67,12 +83,61 @@ public class Guard extends Movement
             randomWalking();
         }        
         else
+=======
+<<<<<<< HEAD
+        blockWalls();
+=======
+>>>>>>> origin/master
+        catchPrisoner();
+    }  
+
+    private int getPrisonerX()
+    {
+        MyWorld w = (MyWorld) getWorld();
+        return w.getPrisoner().getX();
+    }
+
+    private int getPrisonerY()
+    {
+        MyWorld w = (MyWorld) getWorld();
+        return w.getPrisoner().getY();
+    }
+    //calculate distance from prisoner
+    private double distanceFromPrisoner()
+    {
+        double a = Math.pow(getPrisonerX() - getX(), 2);
+        double b = Math.pow(getPrisonerY() - getY(), 2);
+        double c = Math.sqrt(a + b);
+        // if(c == 0)
+        // {
+            // return getPrisonerX() - getY();
+        // }
+        return c;
+    }
+
+    private void walk()
+    {   
+        MyWorld w = (MyWorld) getWorld();
+<<<<<<< HEAD
+        if(!w.getPrisoner().isInSight(this) || distanceFromPrisoner()>150 )
+=======
+        if(!w.getPrisoner().isInSight(this) || distanceFromPrisoner()>300 )
+>>>>>>> origin/master
+        {            
+            randomWalking();
+        }        
+       else
+>>>>>>> origin/master
         {
             followPrisoner();
         }
 
     }
+<<<<<<< HEAD
     //method responsiblke for randon walking 
+=======
+
+>>>>>>> origin/master
     private void randomWalking()
     {
         if(isAtEdge())
@@ -85,17 +150,34 @@ public class Guard extends Movement
         }
         move(1);
     }
+<<<<<<< HEAD
     //method responsible for following the prisoner
+=======
+
+>>>>>>> origin/master
     private void followPrisoner()
     {  
         turnTowards(getPrisonerX(),getPrisonerY());
         move(1);
     }
+<<<<<<< HEAD
     //sets new world Loser() if prisoner get touched by guard
     public void catchPrisoner()
     {   
         if(isTouching(Prisoner.class)){
             Greenfoot.setWorld(new Loser());
+=======
+
+    public void catchPrisoner()
+    {   
+        if(isTouching(Prisoner.class)){
+            //removeTouching(Prisoner.class);
+<<<<<<< HEAD
+            Greenfoot.setWorld(new Loser());
+=======
+            Greenfoot.stop(); 
+>>>>>>> origin/master
+>>>>>>> origin/master
         }
     }
 }
