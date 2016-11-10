@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Hint extends Item
+public class Hint extends AbstractItem
 {
     /**
      * Act - do whatever the Hint wants to do. This method is called whenever
@@ -15,5 +15,13 @@ public class Hint extends Item
     public void act() 
     {
         // Add your action code here.
-    }    
+    }
+    
+    public void pickup()
+    {
+        MyWorld world = (MyWorld) getWorld();
+        world.getQuizHandler().showHintLabelInWorld(world);   
+        super.pickup();
+        
+    }
 }

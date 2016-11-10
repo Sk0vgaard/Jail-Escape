@@ -9,7 +9,7 @@ import java.awt.Color;
  */
 public class Counter extends Actor
 {
-    int key = 0;
+    private int keyHint = 0;
     
 
     /**
@@ -18,12 +18,11 @@ public class Counter extends Actor
      */
     public void act() 
     {
-        setImage(new GreenfootImage("Keys : " + key , 24, Color.GREEN, Color.BLACK));
+        setImage(new GreenfootImage("Keys/hints : " + keyHint, 24, Color.GREEN, Color.BLACK));
     }    
     
-    public void addKeys()
+    public void addKeyAndHint()
     {
-        key++;
-        
+        keyHint++;        
     }
 }

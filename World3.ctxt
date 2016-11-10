@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=World3
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ World3\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=World3()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ World3.\r\n\ \r\n
+comment10.params=
+comment10.target=void\ roomWalls4()
+comment2.params=
+comment2.target=void\ topWalls()
+comment3.params=
+comment3.target=void\ buttomWalls()
+comment4.params=
+comment4.target=void\ leftWalls()
+comment5.params=
+comment5.target=void\ leftWalls2()
+comment6.params=
+comment6.target=void\ rightWalls()
+comment7.params=
+comment7.target=void\ roomWalls()
+comment8.params=
+comment8.target=void\ roomWalls2()
+comment9.params=
+comment9.target=void\ roomWalls3()
+numComments=11

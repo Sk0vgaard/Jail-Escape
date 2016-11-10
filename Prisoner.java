@@ -8,112 +8,154 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Prisoner extends Movement
 {   
-
+    private static final int SPEED = 2;
+    private static final String KEY_UP = "up";
+    private static final String KEY_RIGHT = "right";
+    private static final String KEY_DOWN = "down";
+    private static final String KEY_LEFT = "left";
     private int keysFound;
-    private int dx=MyWorld.getPrisonerInitialX();
-    private int dy=MyWorld.getPrisonerInitialX();
+    private int hintFound;
     public static Prisoner main;
-
+    private boolean touchedKey = false;
 
     public Prisoner()
     {
         keysFound = 0;
-            main=this;   
+        getImage().scale(40,40);
+        main=this;   
+
     }
-    /**
-    * x and y getter
-    */
     
-        public int prisonerGetX(){
-        return  getX();
-       }
-    
-        public int prisonerGetY(){
-        return  getY();
-       }
     /**
      * Do whatever the key likes to to just now.
      */
     public void act()
-    
+
     {
         walk();
-        if (foundKey()) {
-            pickUpKey();
+        checkWall();
+        if (foundItem()) {
+            pickUpItem();
         }
-        // else if (canMove()) {
-            // move();
-        // }
-                
+        openDoor();        
     }
-    
- 
+
+    public void openDoor()
+    {   
+        MyWorld world = (MyWorld) getWorld();
+        Door door = (Door) getOneObjectAtOffset(0, 0, Door.class);
+        if (door != null && hasKey() && world.getQuizHandler().isCorrectAnswer())
+        { 
+            Greenfoot.playSound("open_door_1.mp3");
+            Greenfoot.delay(50);
+            Greenfoot.setWorld(door.getNextWorld());
+        }
+    }
+
     /**
      * Check whether there is a key in the same cell as we are.
      * Return true, if there is, false otherwise.
      */
-    public boolean foundKey()
+    public boolean foundItem()
     {
-        Actor key = getOneObjectAtOffset(0, 0, Key.class);
-        return key != null;
+        AbstractItem item = (AbstractItem) getOneObjectAtOffset(0, 0, AbstractItem.class);
+        return item != null;
     }
-    
-    /**
-     * Pick up the key (if there is one in our cell).
-     */
-    public void pickUpKey()
+
+    public void pickUpItem()
     {
-        Actor key = getOneObjectAtOffset(0, 0, Key.class);
-        Actor hint = getOneObjectAtOffset(0, 0, Hint.class);
-        if (key != null) {
-            // picking up the key...
-            World myWorld = getWorld();
-            getWorld().removeObject(key);
-            getWorld().removeObject(hint);
-            MyWorld myworld = (MyWorld)myWorld;
-            Counter counter = myworld.getCounter();
-            counter.addKeys();           
-            
-            //keysFound = keysFound + 1; 
+        MyWorld world = (MyWorld) getWorld();
+        AbstractItem item = (AbstractItem) getOneObjectAtOffset(0, 0, AbstractItem.class);
+        if (item != null) 
+        {
+            if(item.getClass() == Key.class)
+            {
+                keysFound++;
+                Greenfoot.playSound("key.wav");
+            }
+            else if(item.getClass() == Hint.class)
+            {
+                hintFound++;
+                Greenfoot.playSound("idea.wav");
+            }
+            item.pickup();       
+
         }
     }
- /**
+
+    /**
      * Move one step forward.
      */
-    public void move()
+    public void move(int x, int y)
     {
-        setLocation(dx, dy);
-        
+        setLocation(x, y);
     }    
+
     /**
-     * Act - do whatever the Prisoner wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks which key is pressed and moves accordingly
      */
-    
-    
-    private void doSomething()
+    private void walk()
     {
-        
+        int x = getX();
+        int y = getY();
+        //checks if key up is pressed
+        if (Greenfoot.isKeyDown(KEY_UP))
+        {
+            y -= SPEED;
+            if(Greenfoot.isKeyDown(KEY_LEFT))
+            {
+                x -= SPEED;
+            }
+            else if (Greenfoot.isKeyDown(KEY_RIGHT))
+            {
+                x += SPEED;
+            }
+        }
+        // checks if key left is pressed
+        else if (Greenfoot.isKeyDown(KEY_LEFT))
+        {
+            x -= SPEED;
+            if(Greenfoot.isKeyDown(KEY_DOWN))
+            {
+                y += SPEED; 
+            }
+        }
+
+        else if (Greenfoot.isKeyDown(KEY_DOWN))
+        {
+            y += SPEED; 
+            if (Greenfoot.isKeyDown(KEY_RIGHT))
+            {
+                x += SPEED;
+            }
+            else if (Greenfoot.isKeyDown(KEY_LEFT))
+            {
+                x -= SPEED;
+            }
+        }       
+
+        else if (Greenfoot.isKeyDown(KEY_RIGHT))
+        {
+            x += SPEED;
+        }
+        move(x, y);
+
     }
- 
-        public void walk()
+
+    public boolean hasKey()
     {
-        if (Greenfoot.isKeyDown("w"))
+        return keysFound > 0;
+    }
+
+    public boolean isInSight(Actor actor)
+    {
+        Actor a = Util.getFirstActorBetween(getWorld(), getX(), getY(), actor.getX(), actor.getY(), Walls.class);
+        if(a != null)
         {
-            setRotation(270);
-            move(2);
-        }else if (Greenfoot.isKeyDown("a"))
-        {
-            setRotation(180);
-            move(2);
-                   }else if (Greenfoot.isKeyDown("s"))
-        {
-            setRotation(90);
-            move(2);
-                    }else if (Greenfoot.isKeyDown("d"))
-        {
-            setRotation(0);
-            move(2);
-}
-}
+            return false;            
+
+        }
+        return true;        
+    }
+
 }

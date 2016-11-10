@@ -8,12 +8,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Door extends Actor
 {
+    private MyWorld nextWorld;
+    public Door(MyWorld nextWorld)
+    {
+        this.nextWorld = nextWorld;
+    }
+
+    public MyWorld getNextWorld()
+    {
+        return nextWorld;
+    }
+
     /**
      * Act - do whatever the Door wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+
+    }
 }
