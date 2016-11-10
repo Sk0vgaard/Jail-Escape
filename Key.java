@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Key extends Item
+public class Key extends AbstractItem
 {
     /**
      * Act - do whatever the Key wants to do. This method is called whenever
@@ -15,5 +15,14 @@ public class Key extends Item
     public void act() 
     {
         // Add your action code here.
-    }    
+    }   
+    //Shows the question and answer label when it is picked up
+    public void pickup()
+    {
+
+        MyWorld world = (MyWorld) getWorld();
+        world.getQuizHandler().showQuestionLabel(world);
+        world.getQuizHandler().showAnswerLabel(world);
+        super.pickup();
+    }
 }

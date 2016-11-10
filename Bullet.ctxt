@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Bullet
+comment0.text=\r\n\ Bullet\ object.\ Kills\ enemies.\r\n\ \r\n\ @author\ Alberto\ Bagundo\r\n\ @version\ 1.0\ Feb\ 12,\ 2011\r\n
+comment1.params=direction
+comment1.target=Bullet(int)
+comment1.text=\r\n\ Creates\ a\ bullet\ that\ moves\ towards\ the\ place\ the\ mouse\ is\ pointing.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ Move\ trough\ the\ map\ until\ it\ encounters\ a\ Guard\ or\ gets\ out\ the\ map.\r\n\ \r\n
+numComments=3

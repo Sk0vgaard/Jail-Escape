@@ -1,15 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Room here.
+ * Write a description of class Wall2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Room extends Actor
+public class Wall2 extends Walls
 {
+    //Constructor for the wall
+    public Wall2()
+    {
+        getImage().scale(30,30);
+    }
+
     /**
-     * Act - do whatever the Room wants to do. This method is called whenever
+     * Act - do whatever the Wall2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.*;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -9,31 +9,41 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     Counter counter = new Counter();
-
+    private Prisoner prisoner;
+    private QuizHandler handler;
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    public static int getPrisonerInitialX(){return 300;}
-    public static int getPrisonerInitialY(){return 200;}
+
     public MyWorld()
     { 
         super(800, 500, 1); 
-
-        Key key = new Key();
-
-        // Create a new world with 1200x800 cells with a cell size of 1x1 pixels.
-        
-        addObject(new Prisoner(), 300, 200);
-        addObject(new Guard(), 50, 50);
-        addObject(new Guard(), 600, 400);
-        addObject(new Guard(), 50, 400);
-        addObject(key, 450, 50);
+        prisoner = new Prisoner();
         addObject(counter, 100,40);
 
     }
+    /*
+     *
+     */
     public Counter getCounter()
     {
         return counter;
     }
+
+    public Prisoner getPrisoner()
+    {
+        return prisoner;
+    }
+
+    public QuizHandler getQuizHandler()
+    {
+        return handler;
+    }
+
+    public void setHandler(QuizHandler handler)
+    {
+        this.handler = handler;
+    }
+
 }

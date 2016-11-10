@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=QuizHandler
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ILabelHandle\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=question\ answer\ hint
+comment1.target=QuizHandler(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=world
+comment2.target=void\ showHintLabelInWorld(MyWorld)
+comment3.params=world
+comment3.target=void\ showQuestionLabel(MyWorld)
+comment4.params=world
+comment4.target=void\ showAnswerLabel(MyWorld)
+comment5.params=
+comment5.target=java.lang.String\ getAnswer()
+comment6.params=
+comment6.target=boolean\ isCorrectAnswer()
+numComments=7
