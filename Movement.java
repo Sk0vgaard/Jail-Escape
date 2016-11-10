@@ -16,6 +16,7 @@ public class Movement extends Actor
     public void act() 
     {
         // Add your action code here.
+<<<<<<< HEAD
     }    
             public void blockWalls()
     {   
@@ -99,4 +100,9 @@ public class Movement extends Actor
             setLocation(x1,y1-SPEED);
         }
     }
+=======
+    }  
+    
+    
+>>>>>>> origin/master
 }

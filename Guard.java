@@ -18,17 +18,27 @@ public class Guard extends Movement
     public Guard()
     {
         main=this;
+<<<<<<< HEAD
         getImage().scale(40,40);
         // guardImg = new GreenfootImage(30,30);
         // guardImg.setColor(Color.black);
         // guardImg.fill();
         // setImage(guardImg);
+=======
+        guardImg = new GreenfootImage(30,30);
+        guardImg.setColor(Color.black);
+        guardImg.fill();
+        setImage(guardImg);
+>>>>>>> origin/master
     }
 
     public void act() 
     {   
         walk();
+<<<<<<< HEAD
         blockWalls();
+=======
+>>>>>>> origin/master
         catchPrisoner();
     }  
 
@@ -59,7 +69,11 @@ public class Guard extends Movement
     private void walk()
     {   
         MyWorld w = (MyWorld) getWorld();
+<<<<<<< HEAD
         if(!w.getPrisoner().isInSight(this) || distanceFromPrisoner()>150 )
+=======
+        if(!w.getPrisoner().isInSight(this) || distanceFromPrisoner()>300 )
+>>>>>>> origin/master
         {            
             randomWalking();
         }        
@@ -93,7 +107,11 @@ public class Guard extends Movement
     {   
         if(isTouching(Prisoner.class)){
             //removeTouching(Prisoner.class);
+<<<<<<< HEAD
             Greenfoot.setWorld(new Loser());
+=======
+            Greenfoot.stop(); 
+>>>>>>> origin/master
         }
     }
 }

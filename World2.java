@@ -15,6 +15,7 @@ public class World2 extends MyWorld
      */
     public World2()
     {
+<<<<<<< HEAD
         super();
         Key key = new Key();
         Hint hint = new Hint();
@@ -131,3 +132,22 @@ public class World2 extends MyWorld
     }
 }
 
+=======
+        Key key = new Key();
+
+        // Create a new world with 1200x800 cells with a cell size of 1x1 pixels.
+        
+        addObject(getPrisoner(), 500, 400);
+        // addObject(new Guard(), 50, 50);
+        addObject(new Guard(), 600, 400);
+        // addObject(new Guard(), 50, 400);
+        addObject(new Door(), 750, 450);
+        addObject(key, 550, 400);
+        
+        for(int i = 350; i < 450; i++)
+        {
+            addObject(new Key(), 550, i);
+        }
+    }
+}
+>>>>>>> origin/master

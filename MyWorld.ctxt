@@ -8,8 +8,12 @@ comment2.params=
 comment2.target=Counter\ getCounter()
 comment3.params=
 comment3.target=Prisoner\ getPrisoner()
+<<<<<<< HEAD
 comment4.params=
 comment4.target=QuizHandler\ getQuizHandler()
 comment5.params=handler
 comment5.target=void\ setHandler(QuizHandler)
 numComments=6
+=======
+numComments=4
+>>>>>>> origin/master
